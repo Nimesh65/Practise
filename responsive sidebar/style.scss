@@ -1,0 +1,112 @@
+body {
+  background-color: #fbefef;
+}
+.main {
+  height: 100%;
+  width: 100%;
+  .col {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .col1 {
+    //   display: none;
+      width: 33%;
+      height: 100%;
+      background-color: white;
+      .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .text-logo {
+          display: flex;
+          gap: 15px;
+          text-shadow: 2px 2px #57595b;
+          .color {
+            color: aqua;
+          }
+        }
+        .cross {
+          button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 20px;
+            cursor: pointer;
+            img {
+              width: 35px;
+              height: 35px;
+            }
+          }
+          button:hover img {
+            opacity: 0.7;
+          }
+        }
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        justify-content: space-between;
+        .link {
+          display: flex;
+          flex-direction: column;
+          height: 70%;
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            a {
+              display: block;
+              text-decoration: none;
+              width: 100%;
+            }
+          }
+          li:hover {
+            background-color: aliceblue;
+            // cursor: pointer;
+          }
+        }
+        .social {
+          justify-content: center;
+          align-items: center;
+          ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 7rem;
+            align-items: center;
+            justify-content: center;
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .col1.close {
+        display: none;
+    }
+    .col2 {
+      height: fit-content;
+      width: 100%;
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        cursor: pointer;
+        gap: 5px;
+        margin-top: 20px;
+        margin-right: 20px;
+        span {
+          height: 5px;
+          width: 25px;
+          background-color: black;
+        }
+      }
+    }
+  }
+}

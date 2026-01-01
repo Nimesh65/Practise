@@ -1,0 +1,80 @@
+header {
+  background-color: #f6f9f9;
+}
+header .head {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+header .head .text-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+header .head .text-logo h1 {
+  text-shadow: 2px 2px #ababab;
+}
+header .head .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+header .head .hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+}
+
+.list ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.list ul li {
+  padding: 0.5em 1em;
+  margin: 0.5em;
+}
+.list ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.logo ul li {
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  background-color: white;
+  border-radius: 70px;
+}
+.logo ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 956px) {
+  header .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .head .hamburger {
+    align-self: flex-end;
+    display: flex;
+  }
+  .logo {
+    display: none;
+  }
+  .list ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .list.active ul {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

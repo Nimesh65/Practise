@@ -1,0 +1,25 @@
+@mixin horizontal-list($bg: null, $radius: null) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    li {
+      padding: 0.5em 1em;
+      margin: 0.5em;
+
+      @if $bg {
+        background-color: $bg;
+      }
+
+      @if $radius {
+        border-radius: $radius;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}

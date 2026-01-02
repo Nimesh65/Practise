@@ -1,0 +1,104 @@
+@import url("fonts.googleapis.com");
+
+body {
+  background-color: #f1f5f8;
+}
+section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  .title {
+    h1 {
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 40px;
+      color: rgb(197, 157, 95);
+      font-family: "Great Vibes", cursive;
+    }
+  }
+  .section-center {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 70%;
+    background-color: #f1f5f8;
+    justify-content: space-evenly;
+    .question-btn {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #9aa18f;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      .minus-icon {
+        display: none;
+      }
+      .minus-icon.block {
+        display: none;
+      }
+      .minus-icon.active {
+        display: block;
+      }
+      .plus-icon.block {
+        display: none;
+      }
+      .plus-icon.active {
+        display: block;
+      }
+      .bi {
+        font-size: 50px;
+        color: #858c7e; /* Behance blue */
+      }
+    }
+    .question {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-top-left-radius: 35px;
+      border-bottom-right-radius: 35px;
+      .question-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 25%;
+        gap: 7rem;
+        p {
+          font-size: 20px;
+        }
+      }
+      .question-text {
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        width: 65%;
+        display: none;
+      }
+      .question-text.block {
+        display: block;
+      }
+    }
+  }
+}
+
+article {
+  background-color: white;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    .title {
+      h1 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 10px;
+        color: rgb(197, 157, 95);
+        font-family: "Great Vibes", cursive;
+      }
+    }
+  }
+}

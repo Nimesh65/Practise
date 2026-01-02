@@ -1,0 +1,186 @@
+@use "scss/config/variables" as v;
+@use "scss/config/mixins" as m;
+@use "scss/config/fonts" as f;
+@use "scss/compound/navbar" as n;
+
+body {
+  background-color: v.$background-color;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .whole {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    gap: 3rem;
+    .col1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      margin: 10px;
+      gap: 20px;
+      header {
+        h1 {
+          font-size: 40px;
+          font-family: f.$header-font;
+          font-weight: 700;
+          line-height: 40px;
+          color: v.$header-color;
+        }
+        .underline {
+          justify-self: center;
+          height: 5px;
+          width: 80px;
+          background-color: v.$price-color;
+        }
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        .btn-container {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+        }
+      }
+    }
+
+    .col2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      grid-template-rows: repeat(5, 1fr); /* 5 rows */
+      gap: 2rem; /* optional spacing */
+      //   .breakfast.active {
+      //     display: block;
+      //   }
+      .breakfast.block {
+        display: none;
+      }
+      //   .lunch.active {
+      //     display: block;
+      //   }
+      .lunch.block {
+        display: none;
+      }
+      //   .shakes.active {
+      //     display: block;
+      //   }
+      .shakes.block {
+        display: none;
+      }
+      //   .dinner.active {
+      //     display: block;
+      //   }
+      .dinner.block {
+        display: none;
+      }
+    }
+    article {
+      .food {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        img {
+          height: 150px;
+          width: 200px;
+          border-radius: 5px;
+          border: 5px solid v.$price-color;
+        }
+        .item-info {
+          header {
+            display: flex;
+            justify-content: space-between;
+          }
+          h1 {
+            font-family: f.$header-font;
+            font-size: 16px;
+            font-weight: 700;
+            font-style: normal;
+            color: v.$header-color;
+            letter-spacing: 0.4em;
+          }
+          h2 {
+            font-family: f.$header-font;
+            font-size: 16px;
+            font-weight: 700;
+            font-style: normal;
+            color: v.$price-color;
+            letter-spacing: 0.4em;
+          }
+          p {
+            font-family: f.$paragraph-font;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: v.$paragraph-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    .whole {
+      .col1 {
+        header {
+          h1 {
+            font-size: 25px;
+            font-family: f.$header-font;
+            font-weight: 700;
+            line-height: 40px;
+            color: v.$header-color;
+          }
+          .underline {
+            justify-self: center;
+            height: 3px;
+            width: 40px;
+            background-color: v.$price-color;
+          }
+        }
+        nav {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: center;
+          .btn-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+          }
+        }
+      }
+
+      .col2 {
+        display: flex;
+        flex-direction: column;
+      }
+      article {
+        .food {
+          img {
+          }
+          .item-info {
+            header {
+            }
+            h1 {
+            }
+            h2 {
+            }
+            p {
+            }
+          }
+        }
+      }
+    }
+  }
+}
